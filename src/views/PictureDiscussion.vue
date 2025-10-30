@@ -21,8 +21,6 @@ const fetchPicture = async () => {
     console.error("Error:", error);
   }
 };
-
-// Removed message handling as it's now in ChatSection component
 </script>
 
 <template>
@@ -35,7 +33,6 @@ const fetchPicture = async () => {
         </div>
 
         <img :src="picture.imageUrl" :alt="picture.title" />
-        <p class="description">{{ picture.description }}</p>
       </div>
 
       <ChatSection :pictureId="route.params.id" />
@@ -48,32 +45,36 @@ const fetchPicture = async () => {
   padding: 2rem;
   max-width: 1440px;
   margin: 0 auto;
+  height: calc(100vh - 4rem);
 }
 
 .content-container {
   display: grid;
   grid-template-columns: 1fr 400px;
   gap: 2rem;
-  min-height: calc(100vh - 150px);
-  align-items: start;
+  height: 100%;
+  align-items: stretch;
 }
 
 .content-container :deep(.chat-section) {
-  position: sticky;
-  top: 2rem;
-  max-height: calc(100vh - 4rem);
   height: 100%;
+  overflow: hidden;
 }
 
 .picture-section {
   padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
 .picture-section img {
   width: 100%;
-  max-height: 70vh;
+  flex: 1;
   object-fit: contain;
   margin: 1rem 0;
+  max-height: calc(100% - 100px);
 }
 
 .picture-section h1 {

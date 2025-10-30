@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 
 const props = defineProps({
   pictureId: {
@@ -10,6 +10,20 @@ const props = defineProps({
 
 const messages = ref([]);
 const newMessage = ref("");
+const username = ref(localStorage.getItem("chatUsername") || "");
+
+const promptUsername = () => {
+  const newUsername = prompt(
+    "Please enter your username to participate in the chat:"
+  );
+  if (newUsername?.trim()) {
+    username.value = newUsername.trim();
+    localStorage.setItem("chatUsername", username.value);
+    return true;
+  }
+  return false;
+};
+const ws = ref(null);
 
 const fetchMessages = async () => {
   try {
@@ -25,30 +39,104 @@ const fetchMessages = async () => {
   }
 };
 
+const connectWebSocket = () => {
+  ws.value = new WebSocket("ws://localhost:3000");
+
+  ws.value.onopen = () => {
+    console.log("WebSocket Connected");
+    // picture id to join specific chat room
+    ws.value.send(
+      JSON.stringify({
+        type: "join",
+        pictureId: props.pictureId,
+      })
+    );
+  };
+
+  ws.value.onmessage = (event) => {
+    const data = JSON.parse(event.data);
+    if (data.type === "error") {
+      console.error("Server error:", data.message);
+      return;
+    }
+
+    // ignoring confirmation messages
+    if (data.type === "confirmation") {
+      return;
+    }
+
+    // add message if it belongs to this picture
+    if (data.pictureId === parseInt(props.pictureId)) {
+      messages.value.push(data);
+    }
+  };
+
+  ws.value.onclose = () => {
+    console.log("WebSocket Disconnected");
+    // try to reconnect after a delay
+    setTimeout(connectWebSocket, 3000);
+  };
+
+  ws.value.onerror = (error) => {
+    console.error("WebSocket Error:", error);
+  };
+};
+
 onMounted(() => {
   fetchMessages();
+  connectWebSocket();
+});
+
+onUnmounted(() => {
+  if (ws.value) {
+    ws.value.close();
+  }
 });
 
 const sendMessage = async () => {
   if (!newMessage.value.trim()) return;
 
-  try {
-    const response = await fetch("http://localhost:3000/api/messages/picture", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        pictureId: parseInt(props.pictureId),
-        userName: "Me",
-        content: newMessage.value,
-      }),
-    });
+  // Check for username
+  if (!username.value && !promptUsername()) {
+    alert("You must provide a username to participate in the chat.");
+    return;
+  }
 
-    if (!response.ok) throw new Error("Failed to send message");
-    const savedMessage = await response.json();
-    messages.value.push(savedMessage);
-    newMessage.value = "";
+  try {
+    const messageData = {
+      pictureId: parseInt(props.pictureId),
+      userName: username.value,
+      content: newMessage.value,
+    };
+
+    // send via WebSocket
+    if (ws.value && ws.value.readyState === WebSocket.OPEN) {
+      ws.value.send(
+        JSON.stringify({
+          type: "message",
+          ...messageData,
+        })
+      );
+      // clear input
+      newMessage.value = "";
+    } else {
+      // if WebSocket is not connected fallback to HTTP
+      const response = await fetch(
+        "http://localhost:3000/api/messages/picture",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(messageData),
+        }
+      );
+
+      if (!response.ok) throw new Error("Failed to send message");
+      const savedMessage = await response.json();
+      messages.value.push(savedMessage);
+      newMessage.value = "";
+    }
   } catch (error) {
     console.error("Error sending message:", error);
   }
@@ -127,13 +215,6 @@ const sendMessage = async () => {
 .message p {
   margin: 0;
   color: #4a5568;
-}
-
-.message .timestamp {
-  display: block;
-  font-size: 0.75rem;
-  color: #a0aec0;
-  margin-top: 0.25rem;
 }
 
 .message-input {

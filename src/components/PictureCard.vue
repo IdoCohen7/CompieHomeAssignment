@@ -60,7 +60,7 @@ const navigateToDiscussion = () => {
 .image-container {
   position: relative;
   width: 100%;
-  padding-top: 75%; /* 4:3 Aspect Ratio */
+  padding-top: 75%;
   overflow: hidden;
 }
 

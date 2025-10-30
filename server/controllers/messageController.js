@@ -6,13 +6,17 @@ import { v4 as uuidv4 } from "uuid";
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const messagesData = JSON.parse(
-  fs.readFileSync(path.join(__dirname, "../data/messages.json"), "utf8")
-);
+// Helper function to get fresh messages data
+const getMessagesData = () => {
+  return JSON.parse(
+    fs.readFileSync(path.join(__dirname, "../data/messages.json"), "utf8")
+  );
+};
 
 export const getMessagesByPictureId = (req, res) => {
   const { id } = req.params;
   try {
+    const messagesData = getMessagesData(); // Get fresh data
     const messages = messagesData.messages.filter(
       (message) => message.pictureId === parseInt(id)
     );

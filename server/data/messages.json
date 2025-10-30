@@ -1,23 +1,28 @@
 {
   "messages": [
     {
-      "id": 1,
+      "id": "f4aaa0f9-8bee-4939-b126-361299a3f42d",
       "pictureId": 1,
-      "userName": "ido",
-      "content": "I absolutely adore the use of color in this piece!"
+      "userName": "Ido",
+      "content": "this picture is beautiful"
     },
     {
-      "id": "7e513fd9-a929-4e0a-acc2-4ca9e40724c4",
-      "pictureId": 1,
-      "userName": "Me",
-      "content": "bdika",
-      "timestamp": "2025-10-30T10:46:25.463Z"
+      "id": "9e54ae79-f712-4407-abcd-840bf006a3cb",
+      "pictureId": 4,
+      "userName": "Ido",
+      "content": "this is wonderful"
     },
     {
-      "id": "5e271b77-6bce-4f0f-bb25-3129e0ac56e2",
+      "id": "d7852d39-dc99-4cc2-a370-a166c55c79ce",
+      "pictureId": 4,
+      "userName": "Ido",
+      "content": "great picture"
+    },
+    {
+      "id": "0f32e996-1a50-4ba1-8925-78d477011bd2",
       "pictureId": 1,
-      "userName": "Me",
-      "content": "check"
+      "userName": "Ido",
+      "content": "WOW!"
     }
   ]
 }
