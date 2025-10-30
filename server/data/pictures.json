@@ -1,0 +1,148 @@
+{
+  "pictures": [
+    {
+      "id": 1,
+      "title": "The Starry Night",
+      "artist": "Vincent van Gogh",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg/1280px-Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg",
+      "metadata": {
+        "resolution": "1280x1014",
+        "size": "2.1 MB",
+        "year": 1889
+      }
+    },
+    {
+      "id": 2,
+      "title": "The Persistence of Memory",
+      "artist": "Salvador Dalí",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+      "imageUrl": "https://uploads6.wikiart.org/images/salvador-dali/the-persistence-of-memory-1931.jpg",
+      "metadata": {
+        "resolution": "1600x1200",
+        "size": "1.8 MB",
+        "year": 1931
+      }
+    },
+    {
+      "id": 3,
+      "title": "Girl with a Pearl Earring",
+      "artist": "Johannes Vermeer",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0f/1665_Girl_with_a_Pearl_Earring.jpg/800px-1665_Girl_with_a_Pearl_Earring.jpg",
+      "metadata": {
+        "resolution": "800x952",
+        "size": "1.5 MB",
+        "year": 1665
+      }
+    },
+    {
+      "id": 4,
+      "title": "The Last Supper",
+      "artist": "Leonardo da Vinci",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/%C3%9Altima_Cena_-_Da_Vinci_5.jpg/1280px-%C3%9Altima_Cena_-_Da_Vinci_5.jpg",
+      "metadata": {
+        "resolution": "1280x699",
+        "size": "1.9 MB",
+        "year": 1498
+      }
+    },
+    {
+      "id": 5,
+      "title": "The Scream",
+      "artist": "Edvard Munch",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Sed do eiusmod tempor incididunt ut labore.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg/800px-Edvard_Munch%2C_1893%2C_The_Scream%2C_oil%2C_tempera_and_pastel_on_cardboard%2C_91_x_73_cm%2C_National_Gallery_of_Norway.jpg",
+      "metadata": {
+        "resolution": "800x1015",
+        "size": "1.9 MB",
+        "year": 1893
+      }
+    },
+    {
+      "id": 6,
+      "title": "The Creation of Adam",
+      "artist": "Michelangelo",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum consequat hendrerit lacus, ac pellentesque elit maximus.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg/1280px-Michelangelo_-_Creation_of_Adam_%28cropped%29.jpg",
+      "metadata": {
+        "resolution": "1280x589",
+        "size": "1.8 MB",
+        "year": 1512
+      }
+    },
+    {
+      "id": 7,
+      "title": "The Kiss",
+      "artist": "Gustav Klimt",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce quis lectus quis sem lacinia nonummy. Proin mollis lorem non dolor.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg/800px-The_Kiss_-_Gustav_Klimt_-_Google_Cultural_Institute.jpg",
+      "metadata": {
+        "resolution": "800x800",
+        "size": "1.6 MB",
+        "year": 1908
+      }
+    },
+    {
+      "id": 8,
+      "title": "Guernica",
+      "artist": "Pablo Picasso",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas porttitor congue massa. Fusce posuere, magna sed pulvinar ultricies.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Mural_del_Gernika.jpg/1280px-Mural_del_Gernika.jpg",
+      "metadata": {
+        "resolution": "1280x640",
+        "size": "2.0 MB",
+        "year": 1937
+      }
+    },
+    {
+      "id": 9,
+      "title": "The Great Wave off Kanagawa",
+      "artist": "Katsushika Hokusai",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Purus quam nisi adipiscing. Integer placerat pulvinar parturient.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Tsunami_by_hokusai_19th_century.jpg/1280px-Tsunami_by_hokusai_19th_century.jpg",
+      "metadata": {
+        "resolution": "1280x857",
+        "size": "1.6 MB",
+        "year": 1829
+      }
+    },
+    {
+      "id": 10,
+      "title": "American Gothic",
+      "artist": "Grant Wood",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam feugiat, turpis at pulvinar vulputate, erat libero tristique tellus.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cc/Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg/800px-Grant_Wood_-_American_Gothic_-_Google_Art_Project.jpg",
+      "metadata": {
+        "resolution": "800x1003",
+        "size": "1.8 MB",
+        "year": 1930
+      }
+    },
+    {
+      "id": 11,
+      "title": "The Garden of Earthly Delights",
+      "artist": "Hieronymus Bosch",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus convallis urna atque consequat amet. Fusce fermentum.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/The_Garden_of_earthly_delights.jpg/1280px-The_Garden_of_earthly_delights.jpg",
+      "metadata": {
+        "resolution": "1280x720",
+        "size": "2.2 MB",
+        "year": 1515
+      }
+    },
+    {
+      "id": 12,
+      "title": "The Son of Man",
+      "artist": "René Magritte",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mauris ante, elementum et, bibendum at, posuere sit amet.",
+      "imageUrl": "https://upload.wikimedia.org/wikipedia/en/e/e5/Magritte_TheSonOfMan.jpg",
+      "metadata": {
+        "resolution": "860x1084",
+        "size": "1.7 MB",
+        "year": 1964
+      }
+    }
+  ]
+}
