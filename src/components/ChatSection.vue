@@ -40,7 +40,7 @@ const fetchMessages = async () => {
 };
 
 const connectWebSocket = () => {
-  ws.value = new WebSocket("ws://localhost:3000");
+  ws.value = new WebSocket(import.meta.env.VITE_WEBSOCKET_URL);
 
   ws.value.onopen = () => {
     console.log("WebSocket Connected");

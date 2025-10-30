@@ -1,9 +1,5 @@
 <script setup>
-import { ref } from "vue";
-import Header from "./components/Header.vue";
-import PictureGrid from "./components/PictureGrid.vue";
-
-const searchQuery = ref("");
+// App.vue serves as the root component, rendering current route via router-view
 </script>
 
 <template>

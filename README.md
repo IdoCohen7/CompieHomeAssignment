@@ -13,4 +13,4 @@
 - ws - WebSocket for real-time chat
 - UUID - Generate unique IDs
 - CORS - Enable cross-origin requests
-- dotenv - Environment variables management
+- dotenv - Environment variables management (NEED TO ADD WEBSOCKET URL AND PORT TO ENV VARS IN BOTH SERVER AND CLIENT)

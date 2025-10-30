@@ -39,6 +39,7 @@ export const createMessage = (req, res) => {
       content,
     };
 
+    const messagesData = getMessagesData();
     messagesData.messages.push(newMessage);
 
     // Save to file
