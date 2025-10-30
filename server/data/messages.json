@@ -1,0 +1,23 @@
+{
+  "messages": [
+    {
+      "id": 1,
+      "pictureId": 1,
+      "userName": "ido",
+      "content": "I absolutely adore the use of color in this piece!"
+    },
+    {
+      "id": "7e513fd9-a929-4e0a-acc2-4ca9e40724c4",
+      "pictureId": 1,
+      "userName": "Me",
+      "content": "bdika",
+      "timestamp": "2025-10-30T10:46:25.463Z"
+    },
+    {
+      "id": "5e271b77-6bce-4f0f-bb25-3129e0ac56e2",
+      "pictureId": 1,
+      "userName": "Me",
+      "content": "check"
+    }
+  ]
+}
